@@ -107,13 +107,13 @@ const About = () => {
             </div>
 
             {/* License Image */}
-            <div className="relative rounded-xl overflow-hidden border border-white/10 max-w-xs mx-auto">
+            <div className="relative rounded-lg overflow-hidden border border-white/10 max-w-[200px] mx-auto">
               <img 
                 src="https://customer-assets.emergentagent.com/job_a6e7e9b0-0fe7-4305-96be-d63ea68c51f3/artifacts/d1muaulk_Detetctiv%20Giurgiu%20Licenta.jpg"
                 alt="Licență de funcționare Detectivi Focșani"
                 className="w-full h-auto object-cover"
               />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-3">
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-2">
                 <p className="text-[#c9a227] text-xs font-medium text-center">Licență verificată și activă</p>
               </div>
             </div>

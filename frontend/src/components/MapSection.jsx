@@ -25,7 +25,7 @@ const MapSection = () => {
           <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl aspect-square">
             <iframe
               title="Locație Detectivi Focșani"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2804.8445694686684!2d27.177299315514846!3d45.69667797910429!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b6de7d0f4a3a9d%3A0x9c9e5b0c1d5b9a1f!2sBulevardul%20Unirii%2020%2C%20Foc%C8%99ani!5e0!3m2!1sro!2sro!4v1706000000000!5m2!1sro!2sro"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22438.75655974935!2d27.16!3d45.7!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b6de7c8b7c0001%3A0x1c7c0d2a3b4c5d6e!2sFoc%C8%99ani!5e0!3m2!1sro!2sro!4v1706000000000!5m2!1sro!2sro"
               width="100%"
               height="100%"
               style={{ border: 0 }}
