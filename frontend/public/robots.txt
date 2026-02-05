@@ -1,0 +1,80 @@
+# robots.txt - Detectivi Focșani
+# CABINET INDIVIDUAL DETECTIV PARTICULAR ENE D. GABRIEL
+# https://detectivi-focsani.ro
+
+# =====================================================
+# GOOGLEBOT - Acces total pentru indexare
+# =====================================================
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# =====================================================
+# GOOGLE AI & INSPECTION TOOLS - Acces complet
+# =====================================================
+User-agent: Google-InspectionTool
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-Video
+Allow: /
+
+User-agent: Googlebot-News
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# =====================================================
+# BING & YAHOO - Acces permis
+# =====================================================
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2
+
+# =====================================================
+# ALTE MOTOARE DE CĂUTARE - Acces permis
+# =====================================================
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Yandex
+Allow: /
+Crawl-delay: 3
+
+User-agent: facebot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+# =====================================================
+# REGULI GENERALE - Toți roboții
+# =====================================================
+User-agent: *
+Allow: /
+
+# Blocăm accesul la fișiere tehnice
+Disallow: /static/js/*.map
+Disallow: /static/css/*.map
+Disallow: /*.json$
+Disallow: /api/
+
+# =====================================================
+# SITEMAP - Pentru indexare rapidă
+# =====================================================
+Sitemap: https://detectivi-focsani.ro/sitemap.xml
+
+# =====================================================
+# INFORMAȚII CONTACT
+# =====================================================
+# Website: https://detectivi-focsani.ro
+# Email: detectiviexperti@gmail.com
+# Telefon: 0725 040 500
+# Adresa: Bulevardul Unirii, nr. 20, Focșani, Vrancea
