@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import InfidelitySection from "./components/InfidelitySection";
 import MapSection from "./components/MapSection";
 import About from "./components/About";
 import Services from "./components/Services";
@@ -19,6 +20,7 @@ const HomePage = () => (
     <Header />
     <main>
       <Hero />
+      <InfidelitySection />
       <MapSection />
       <About />
       <Services />
