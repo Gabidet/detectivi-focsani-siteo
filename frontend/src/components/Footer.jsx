@@ -1,29 +1,12 @@
 import React from 'react';
-import { Phone, Mail, MapPin, MessageCircle } from 'lucide-react';
+import { Phone, Mail, MapPin } from 'lucide-react';
 import { companyInfo } from '../data/mockData';
-import { Button } from './ui/button';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
     <footer className="bg-[#050508] border-t border-white/10">
-      {/* WhatsApp CTA */}
-      <div className="py-8 bg-gradient-to-r from-[#c9a227]/10 via-[#c9a227]/5 to-[#c9a227]/10">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <a
-            href={`https://wa.me/${companyInfo.whatsapp}?text=Bună%20ziua!%20Doresc%20mai%20multe%20informații.`}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Button className="bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-6">
-              <MessageCircle className="w-5 h-5 mr-2" />
-              Scrie-ne pe WhatsApp
-            </Button>
-          </a>
-        </div>
-      </div>
-
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="grid md:grid-cols-3 gap-8">
