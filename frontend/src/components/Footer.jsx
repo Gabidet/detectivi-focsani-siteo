@@ -34,11 +34,12 @@ const Footer = () => {
             <h4 className="text-white font-semibold mb-4">Linkuri Rapide</h4>
             <ul className="space-y-2">
               {[
-                { href: '#acasa', label: 'Acasă' },
-                { href: '#servicii', label: 'Servicii' },
-                { href: '#despre', label: 'Despre Noi' },
-                { href: '#testimoniale', label: 'Testimoniale' },
-                { href: '#contact', label: 'Contact' }
+                { href: '/#acasa', label: 'Acasă' },
+                { href: '/#servicii', label: 'Servicii' },
+                { href: '/#despre', label: 'Despre Noi' },
+                { href: '/#testimoniale', label: 'Testimoniale' },
+                { href: '/#contact', label: 'Contact' },
+                { href: '/politica-confidentialitate', label: 'Politica de Confidențialitate' }
               ].map((link) => (
                 <li key={link.href}>
                   <a
