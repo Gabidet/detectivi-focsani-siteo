@@ -32,16 +32,16 @@ const MapSection = () => {
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              className="grayscale hover:grayscale-0 transition-all duration-500 absolute inset-0"
+              className="absolute inset-0"
             />
             
             {/* Overlay with covered areas */}
-            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#0a0a0f] to-transparent p-3">
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#0a0a0f]/90 to-transparent p-3">
               <div className="flex flex-wrap gap-2 justify-center">
                 {coveredAreas.map((area, index) => (
                   <span
                     key={index}
-                    className="bg-[#c9a227]/20 text-[#c9a227] px-2 py-1 rounded-full text-xs font-medium border border-[#c9a227]/30"
+                    className="bg-[#c9a227] text-black px-3 py-1.5 rounded-full text-xs font-semibold"
                   >
                     {area}
                   </span>
