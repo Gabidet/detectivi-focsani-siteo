@@ -1,33 +1,92 @@
-import React, { useState } from 'react';
-import { Phone, Mail, MapPin, Clock, Send, MessageCircle } from 'lucide-react';
+import React, { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
+import { Phone, Mail, MapPin, Clock, Send, CheckCircle, AlertCircle } from 'lucide-react';
 import { companyInfo, coveredAreas, serviceOptions } from '../data/mockData';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
 import { Label } from './ui/label';
+import { Checkbox } from './ui/checkbox';
+
+// EmailJS Configuration - Replace these with your actual EmailJS credentials
+const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID'; // e.g., 'service_xxxxx'
+const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID'; // e.g., 'template_xxxxx'
+const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY'; // e.g., 'xxxxxxxxxxxxx'
 
 const Contact = () => {
+  const formRef = useRef();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
     service: '',
-    message: ''
+    message: '',
+    gdprConsent: false
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null); // 'success' | 'error' | null
+  const [errorMessage, setErrorMessage] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    
+    if (!formData.gdprConsent) {
+      setSubmitStatus('error');
+      setErrorMessage('Trebuie să acceptați Politica de Confidențialitate pentru a trimite mesajul.');
+      return;
+    }
+
     setIsSubmitting(true);
-    // Simulate form submission
-    setTimeout(() => {
+    setSubmitStatus(null);
+    setErrorMessage('');
+
+    // Prepare template parameters for EmailJS
+    const templateParams = {
+      from_name: formData.name,
+      from_email: formData.email || 'Nu a fost furnizat',
+      from_phone: formData.phone,
+      service: formData.service || 'Nu a fost selectat',
+      message: formData.message,
+      to_email: 'detectiviexperti@gmail.com'
+    };
+
+    try {
+      // Check if EmailJS is configured
+      if (EMAILJS_SERVICE_ID === 'YOUR_SERVICE_ID' || 
+          EMAILJS_TEMPLATE_ID === 'YOUR_TEMPLATE_ID' || 
+          EMAILJS_PUBLIC_KEY === 'YOUR_PUBLIC_KEY') {
+        // Demo mode - simulate success
+        console.log('EmailJS Demo Mode - Form data:', templateParams);
+        await new Promise(resolve => setTimeout(resolve, 1500));
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', phone: '', service: '', message: '', gdprConsent: false });
+      } else {
+        // Production mode - send via EmailJS
+        const result = await emailjs.send(
+          EMAILJS_SERVICE_ID,
+          EMAILJS_TEMPLATE_ID,
+          templateParams,
+          EMAILJS_PUBLIC_KEY
+        );
+        
+        if (result.status === 200) {
+          setSubmitStatus('success');
+          setFormData({ name: '', email: '', phone: '', service: '', message: '', gdprConsent: false });
+        }
+      }
+    } catch (error) {
+      console.error('EmailJS Error:', error);
+      setSubmitStatus('error');
+      setErrorMessage('A apărut o eroare. Vă rugăm să ne contactați telefonic.');
+    } finally {
       setIsSubmitting(false);
-      setSubmitted(true);
-      setFormData({ name: '', email: '', phone: '', service: '', message: '' });
-      setTimeout(() => setSubmitted(false), 3000);
-    }, 1000);
+      // Reset status after 5 seconds
+      setTimeout(() => {
+        setSubmitStatus(null);
+        setErrorMessage('');
+      }, 5000);
+    }
   };
 
   const handleChange = (e) => {
@@ -129,16 +188,23 @@ const Contact = () => {
           <div className="bg-white/5 rounded-2xl p-6 md:p-8 border border-white/10">
             <h3 className="text-xl font-bold text-white mb-6">Formular de Contact</h3>
 
-            {submitted ? (
+            {submitStatus === 'success' ? (
               <div className="text-center py-12">
                 <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Send className="w-8 h-8 text-green-500" />
+                  <CheckCircle className="w-8 h-8 text-green-500" />
                 </div>
                 <h4 className="text-white text-xl font-semibold mb-2">Mesaj trimis cu succes!</h4>
                 <p className="text-gray-400">Vă vom contacta în cel mai scurt timp.</p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-5">
+              <form ref={formRef} onSubmit={handleSubmit} className="space-y-5">
+                {submitStatus === 'error' && (
+                  <div className="bg-red-500/10 border border-red-500/30 rounded-lg p-4 flex items-start gap-3">
+                    <AlertCircle className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
+                    <p className="text-red-400 text-sm">{errorMessage}</p>
+                  </div>
+                )}
+
                 <div>
                   <Label htmlFor="name" className="text-white mb-2 block">
                     Nume complet <span className="text-[#c9a227]">*</span>
@@ -226,13 +292,36 @@ const Contact = () => {
                   />
                 </div>
 
+                {/* GDPR Consent */}
+                <div className="flex items-start gap-3">
+                  <Checkbox
+                    id="gdprConsent"
+                    checked={formData.gdprConsent}
+                    onCheckedChange={(checked) => setFormData({ ...formData, gdprConsent: checked })}
+                    className="mt-1 border-white/30 data-[state=checked]:bg-[#c9a227] data-[state=checked]:border-[#c9a227]"
+                  />
+                  <Label htmlFor="gdprConsent" className="text-gray-400 text-sm leading-relaxed cursor-pointer">
+                    Am citit și sunt de acord cu{' '}
+                    <a href="/politica-confidentialitate" className="text-[#c9a227] hover:underline">
+                      Politica de Confidențialitate
+                    </a>{' '}
+                    și consent la prelucrarea datelor personale conform GDPR. <span className="text-[#c9a227]">*</span>
+                  </Label>
+                </div>
+
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-[#c9a227] hover:bg-[#b8922a] text-black font-semibold py-6"
+                  className="w-full bg-[#c9a227] hover:bg-[#b8922a] text-black font-semibold py-6 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? (
-                    'Se trimite...'
+                    <span className="flex items-center gap-2">
+                      <svg className="animate-spin h-5 w-5" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+                      </svg>
+                      Se trimite...
+                    </span>
                   ) : (
                     <>
                       <Send className="w-4 h-4 mr-2" />
@@ -241,7 +330,7 @@ const Contact = () => {
                   )}
                 </Button>
 
-                <p className="text-gray-500 text-sm text-center">
+                <p className="text-gray-500 text-xs text-center">
                   * Toate informațiile sunt strict confidențiale și protejate conform GDPR.
                 </p>
               </form>
