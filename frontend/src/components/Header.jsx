@@ -49,15 +49,15 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#acasa" className="flex items-center gap-3">
+          <a href="#acasa" className="flex items-center gap-4">
             <img
               src={companyInfo.logo}
               alt="Detectivi Focșani Logo"
-              className="h-14 w-14 object-contain rounded-full"
+              className="h-20 w-20 object-contain rounded-full shadow-lg shadow-[#c9a227]/20"
             />
             <div className="flex flex-col">
-              <span className="text-xl font-bold text-white tracking-wide">DETECTIVI</span>
-              <span className="text-[#c9a227] text-sm font-semibold tracking-widest">FOCȘANI</span>
+              <span className="text-2xl font-bold text-white tracking-wide">DETECTIVI</span>
+              <span className="text-[#c9a227] text-base font-semibold tracking-widest">FOCȘANI</span>
             </div>
           </a>
 

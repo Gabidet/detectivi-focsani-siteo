@@ -13,9 +13,9 @@ export const companyInfo = {
 };
 
 export const mottos = [
-  "Liniștea ta începe cu adevărul.",
-  "Informația este putere. Noi o livrăm.",
-  "Claritate pentru viața ta privată."
+  "Liniștea ta începe cu adevărul!",
+  "Informația este putere. Noi o livrăm!",
+  "Claritate pentru viața ta privată!"
 ];
 
 export const stats = [
