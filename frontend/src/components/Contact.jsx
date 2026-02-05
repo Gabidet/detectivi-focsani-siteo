@@ -9,10 +9,10 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '.
 import { Label } from './ui/label';
 import { Checkbox } from './ui/checkbox';
 
-// EmailJS Configuration - Replace these with your actual EmailJS credentials
-const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID'; // e.g., 'service_xxxxx'
-const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID'; // e.g., 'template_xxxxx'
-const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY'; // e.g., 'xxxxxxxxxxxxx'
+// EmailJS Configuration
+const EMAILJS_SERVICE_ID = 'service_detectiv2';
+const EMAILJS_TEMPLATE_ID = 'template_h61gvjg';
+const EMAILJS_PUBLIC_KEY = 'MmcMxuEphXXo_went';
 
 const Contact = () => {
   const formRef = useRef();
