@@ -23,8 +23,22 @@ const InfidelitySection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-[#0a0a0f] via-[#0f0f14] to-[#0a0a0f] relative overflow-hidden">
-      {/* Decorative elements */}
+    <section className="py-20 relative overflow-hidden">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url('https://customer-assets.emergentagent.com/job_a6e7e9b0-0fe7-4305-96be-d63ea68c51f3/artifacts/q9jar7vn_Detectiv%20Focsani.jpg')`
+        }}
+      />
+      
+      {/* Dark Overlay for text readability */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0f]/95 via-[#0a0a0f]/85 to-[#0a0a0f]/70" />
+      
+      {/* Additional gradient overlay from bottom */}
+      <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f] via-transparent to-[#0a0a0f]/80" />
+      
+      {/* Decorative lines */}
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#c9a227]/30 to-transparent" />
       <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#c9a227]/30 to-transparent" />
       
