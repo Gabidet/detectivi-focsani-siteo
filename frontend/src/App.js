@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
@@ -10,22 +11,45 @@ import FAQ from "./components/FAQ";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import WhatsAppButton from "./components/WhatsAppButton";
+import PrivacyPolicy from "./components/PrivacyPolicy";
+
+// Home Page Component
+const HomePage = () => (
+  <>
+    <Header />
+    <main>
+      <Hero />
+      <MapSection />
+      <About />
+      <Services />
+      <Testimonials />
+      <FAQ />
+      <Contact />
+    </main>
+    <Footer />
+    <WhatsAppButton />
+  </>
+);
+
+// Privacy Policy Page Component
+const PrivacyPage = () => (
+  <>
+    <Header />
+    <PrivacyPolicy />
+    <Footer />
+    <WhatsAppButton />
+  </>
+);
 
 function App() {
   return (
     <div className="App bg-[#0a0a0f] min-h-screen">
-      <Header />
-      <main>
-        <Hero />
-        <MapSection />
-        <About />
-        <Services />
-        <Testimonials />
-        <FAQ />
-        <Contact />
-      </main>
-      <Footer />
-      <WhatsAppButton />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/politica-confidentialitate" element={<PrivacyPage />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
