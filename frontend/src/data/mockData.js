@@ -136,28 +136,28 @@ export const testimonials = [
 export const faqs = [
   {
     id: 1,
-    question: "Cum pot contacta un detectiv particular în Focșani?",
-    answer: "Ne puteți contacta telefonic la numărul 0725 040 500 (disponibil 24/7), prin email la detectivexperti@gmail.com, sau completând formularul de contact de pe site. Oferim consultanță inițială gratuită și confidențială."
+    question: "Este legal să angajez un detectiv particular în România?",
+    answer: "Da, este complet legal. Detectivii particulari sunt autorizați și licențiați de IGPR conform Legii 329/2003. Toate investigațiile noastre respectă legislația în vigoare."
   },
   {
     id: 2,
-    question: "Cât costă serviciile unui detectiv în Focșani?",
-    answer: "Costurile variază în funcție de complexitatea cazului, durata investigației și resursele necesare. Oferim o evaluare gratuită a cazului și un deviz personalizat. Contactați-ne pentru o ofertă adaptată nevoilor dumneavoastră."
+    question: "Cât costă serviciile de supraveghere în Focșani?",
+    answer: "Costurile variază în funcție de complexitate și durată. Oferim evaluare gratuită și deviz personalizat. Contactați-ne la 0725 040 500 pentru o ofertă adaptată nevoilor dumneavoastră."
   },
   {
     id: 3,
-    question: "Ce servicii oferă detectivii particulari din Focșani?",
-    answer: "Oferim o gamă completă de servicii: verificare fidelitate, supraveghere profesională, detectare dispozitive de spionaj, teste poligraf, background check, investigații corporate, supraveghere minori și investigații fraude asigurări."
+    question: "Sunt dovezile obținute de detectivi valabile în instanță?",
+    answer: "Da, toate dovezile sunt obținute legal și sunt admisibile în instanță. Rapoartele noastre sunt acceptate în proceduri de divorț, custodie și alte litigii civile."
   },
   {
     id: 4,
-    question: "Sunt legale serviciile de detectiv particular în Focșani?",
-    answer: "Da, suntem o agenție complet autorizată și licențiată de IGPR. Toate investigațiile noastre respectă legislația în vigoare, iar dovezile obținute sunt admisibile în instanță."
+    question: "Cât durează o investigație de verificare fidelitate?",
+    answer: "În general, între 3-14 zile, în funcție de caz. Unele situații necesită mai mult timp pentru dovezi concludente. Vă oferim estimări realiste la începutul colaborării."
   },
   {
     id: 5,
-    question: "Cât durează o investigație în Focșani?",
-    answer: "Durata depinde de tipul și complexitatea cazului. O verificare fidelitate poate dura între 3-14 zile, în timp ce investigațiile corporate pot necesita mai mult timp. Vă oferim estimări realiste la începutul colaborării."
+    question: "Este confidențială colaborarea cu un detectiv particular?",
+    answer: "Absolut. Garantăm 100% confidențialitate conform GDPR. Informațiile despre clienți și investigații nu sunt divulgate nimănui fără acordul dumneavoastră expres."
   }
 ];
 
