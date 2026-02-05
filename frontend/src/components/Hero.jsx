@@ -23,17 +23,31 @@ const Hero = () => {
       id="acasa"
       className="relative min-h-screen flex items-center justify-center pt-32 pb-20 overflow-hidden"
     >
-      {/* Background Image */}
+      {/* Background Image - Desktop */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 hidden md:block bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `url('https://customer-assets.emergentagent.com/job_a6e7e9b0-0fe7-4305-96be-d63ea68c51f3/artifacts/q9jar7vn_Detectiv%20Focsani.jpg')`
         }}
       />
       
-      {/* Dark Overlay - reduced opacity for more visible background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0f]/80 via-[#0a0a0f]/60 to-[#0a0a0f]/40" />
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0f]/70 via-transparent to-[#0a0a0f]/90" />
+      {/* Background Image - Mobile (contain to show full image) */}
+      <div 
+        className="absolute inset-0 md:hidden bg-contain bg-top bg-no-repeat"
+        style={{
+          backgroundImage: `url('https://customer-assets.emergentagent.com/job_a6e7e9b0-0fe7-4305-96be-d63ea68c51f3/artifacts/q9jar7vn_Detectiv%20Focsani.jpg')`
+        }}
+      />
+      
+      {/* Base dark background for mobile */}
+      <div className="absolute inset-0 md:hidden bg-[#0a0a0f]" style={{ zIndex: -1 }} />
+      
+      {/* Dark Overlay - Desktop */}
+      <div className="absolute inset-0 hidden md:block bg-gradient-to-r from-[#0a0a0f]/80 via-[#0a0a0f]/60 to-[#0a0a0f]/40" />
+      <div className="absolute inset-0 hidden md:block bg-gradient-to-b from-[#0a0a0f]/70 via-transparent to-[#0a0a0f]/90" />
+      
+      {/* Dark Overlay - Mobile (lighter overlay to show image better) */}
+      <div className="absolute inset-0 md:hidden bg-gradient-to-b from-[#0a0a0f]/60 via-[#0a0a0f]/40 to-[#0a0a0f]" />
       
       {/* Decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
