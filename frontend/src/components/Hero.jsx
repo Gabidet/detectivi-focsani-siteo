@@ -31,9 +31,9 @@ const Hero = () => {
         }}
       />
       
-      {/* Dark Overlay for text readability */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0f]/95 via-[#0a0a0f]/85 to-[#0a0a0f]/70" />
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0f]/80 via-[#0a0a0f]/50 to-[#0a0a0f]" />
+      {/* Dark Overlay - reduced opacity for more visible background */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0f]/80 via-[#0a0a0f]/60 to-[#0a0a0f]/40" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0f]/70 via-transparent to-[#0a0a0f]/90" />
       
       {/* Decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
