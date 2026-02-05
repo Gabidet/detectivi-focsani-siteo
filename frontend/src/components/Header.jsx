@@ -53,7 +53,7 @@ const Header = () => {
             <img
               src={companyInfo.logo}
               alt="Detectivi Focșani Logo"
-              className="h-20 w-20 object-contain rounded-full shadow-lg shadow-[#c9a227]/20"
+              className="h-24 w-24 object-contain rounded-full shadow-xl shadow-[#c9a227]/30 border-2 border-[#c9a227]/40"
             />
             <div className="flex flex-col">
               <span className="text-2xl font-bold text-white tracking-wide">DETECTIVI</span>
