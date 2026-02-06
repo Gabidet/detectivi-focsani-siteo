@@ -17,7 +17,7 @@ export const blogPosts = [
     content: "",
     category: "Investigații",
     categorySlug: "investigatii",
-    image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=500&fit=crop",
+    image: "https://customer-assets.emergentagent.com/job_a6e7e9b0-0fe7-4305-96be-d63ea68c51f3/artifacts/yu0iilfu_Adulter%20Detectiv%20Focsani.jpg",
     author: "Echipa Detectivi Focșani",
     date: "2025-02-01",
     readTime: "5 min"
