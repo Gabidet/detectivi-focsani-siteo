@@ -39,11 +39,11 @@ export const blogPosts = [
     id: 3,
     title: "Supravegherea discretă: Tehnici profesionale folosite de detectivi",
     slug: "supraveghere-discreta-tehnici",
-    excerpt: "Explorează metodele legale de supraveghere utilizate de detectivii profesioniști. De la filaj la monitorizare electronică - totul în limitele legii.",
+    excerpt: "Explorează metodele legale de supraveghere utilizate de detectivii profesioniști. De la filaj la detectare microfoane ascunse - totul în limitele legii.",
     content: "",
     category: "Investigații",
     categorySlug: "investigatii",
-    image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&h=500&fit=crop",
+    image: "https://customer-assets.emergentagent.com/job_a6e7e9b0-0fe7-4305-96be-d63ea68c51f3/artifacts/9e6m50jg_Detectiv%20Focsani.jpeg",
     author: "Echipa Detectivi Focșani",
     date: "2025-01-25",
     readTime: "6 min"
