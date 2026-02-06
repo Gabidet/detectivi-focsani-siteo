@@ -13,6 +13,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import WhatsAppButton from "./components/WhatsAppButton";
 import PrivacyPolicy from "./components/PrivacyPolicy";
+import BlogPage from "./components/BlogPage";
 
 // Home Page Component
 const HomePage = () => (
@@ -43,6 +44,16 @@ const PrivacyPage = () => (
   </>
 );
 
+// Blog Page Component
+const BlogPageWrapper = () => (
+  <>
+    <Header />
+    <BlogPage />
+    <Footer />
+    <WhatsAppButton />
+  </>
+);
+
 function App() {
   return (
     <div className="App bg-[#0a0a0f] min-h-screen">
@@ -50,6 +61,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/politica-confidentialitate" element={<PrivacyPage />} />
+          <Route path="/blog" element={<BlogPageWrapper />} />
         </Routes>
       </BrowserRouter>
     </div>
