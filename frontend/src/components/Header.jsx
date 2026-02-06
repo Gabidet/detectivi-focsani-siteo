@@ -24,11 +24,11 @@ const Header = () => {
   }, []);
 
   const navLinks = [
-    { href: '#acasa', label: 'Acasă' },
-    { href: '#servicii', label: 'Servicii' },
-    { href: '#despre', label: 'Despre Noi' },
-    { href: '#testimoniale', label: 'Testimoniale' },
-    { href: '#contact', label: 'Contact' }
+    { href: '/', label: 'Acasă' },
+    { href: '/#servicii', label: 'Servicii' },
+    { href: '/#despre', label: 'Despre Noi' },
+    { href: '/blog', label: 'Blog' },
+    { href: '/#contact', label: 'Contact' }
   ];
 
   return (
