@@ -141,10 +141,13 @@ const BlogPage = () => {
                     </p>
 
                     {/* Read More */}
-                    <button className="flex items-center gap-2 text-[#c9a227] font-medium text-sm group-hover:gap-3 transition-all">
+                    <a 
+                      href={`/blog/${post.slug}`}
+                      className="flex items-center gap-2 text-[#c9a227] font-medium text-sm group-hover:gap-3 transition-all"
+                    >
                       Citește articolul
                       <ChevronRight className="w-4 h-4" />
-                    </button>
+                    </a>
                   </div>
                 </article>
               ))}
