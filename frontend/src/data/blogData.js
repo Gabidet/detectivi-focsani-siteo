@@ -79,10 +79,31 @@ export const blogPosts = [
     title: "Cum funcționează testul poligraf și când este recomandat",
     slug: "test-poligraf-detectorul-minciuni",
     excerpt: "Totul despre detectorul de minciuni: cum funcționează, cât de precis este și în ce situații este util. Informații de la experții noștri certificați.",
-    content: "",
+    content: `Testul poligraf (cunoscut popular ca „detectorul de minciuni") măsoară reacțiile fiziologice ale unei persoane pentru a evalua dacă răspunsurile oferite sunt sincere sau nu.
+
+## Cum funcționează
+
+Aparatul nu detectează minciuna direct, ci monitorizează modificările involuntare ale corpului cauzate de stresul emoțional care apare atunci când cineva nu spune adevărul. Parametrii principali măsurați sunt:
+
+- **Respirația:** Ritmul și profunzimea.
+- **Activitatea cardiovasculară:** Pulsul și tensiunea arterială.
+- **Conductanța pielii:** Transpirația la nivelul degetelor.
+
+O examinare tipică durează între 45 și 90 de minute și include o etapă de interviu pre-testare, testarea propriu-zisă și analiza datelor de către un expert.
+
+## Când este recomandat
+
+Testarea este utilizată în diverse contexte, dar în România este strict benevolă (necesită acordul scris al persoanei). Situațiile principale includ:
+
+- **Investigații penale:** Pentru a ajuta la eliminarea suspecților sau confirmarea unor declarații, deși rezultatul nu constituie probă certă în instanță, având doar rol de indiciu.
+- **Resurse umane:** Companiile îl folosesc la interviurile de angajare pentru posturi critice sau în investigații interne (furturi, scurgeri de informații).
+- **Cazuri private:** Teste de fidelitate sau clarificarea unor dispute personale.
+- **Verificări de integritate:** Pentru personalul care lucrează în instituții de securitate sau justiție.
+
+**Important:** Precizia testului este estimată de experți la aproximativ 95-98%, însă validitatea sa este frecvent dezbătută în comunitatea științifică.`,
     category: "Tehnologie",
     categorySlug: "tehnologie",
-    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=500&fit=crop",
+    image: "https://customer-assets.emergentagent.com/job_a6e7e9b0-0fe7-4305-96be-d63ea68c51f3/artifacts/d675x5n4_Detector%20minciuni%20Focsani%2C%20Poligraf.jpg",
     author: "Echipa Detectivi Focșani",
     date: "2025-01-10",
     readTime: "6 min"
