@@ -1,6 +1,6 @@
 # robots.txt - Detectivi Focșani
 # CABINET INDIVIDUAL DETECTIV PARTICULAR ENE D. GABRIEL
-# https://detectivi-focsani.ro
+# https://detectivi-privati-focsani.ro
 
 # =====================================================
 # GOOGLEBOT - Acces total pentru indexare
@@ -63,18 +63,16 @@ Allow: /
 # Blocăm accesul la fișiere tehnice
 Disallow: /static/js/*.map
 Disallow: /static/css/*.map
-Disallow: /*.json$
-Disallow: /api/
 
 # =====================================================
 # SITEMAP - Pentru indexare rapidă
 # =====================================================
-Sitemap: https://detectivi-focsani.ro/sitemap.xml
+Sitemap: https://detectivi-privati-focsani.ro/sitemap.xml
 
 # =====================================================
 # INFORMAȚII CONTACT
 # =====================================================
-# Website: https://detectivi-focsani.ro
+# Website: https://detectivi-privati-focsani.ro
 # Email: detectiviexperti@gmail.com
 # Telefon: 0725 040 500
 # Adresa: Bulevardul Unirii, nr. 20, Focșani, Vrancea
